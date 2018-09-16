@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/shopping_cart/shopping_cart",
+    "pages/mine/mine",
+    "pages/snow_pack_detail/snow_pack_detail",
+    "pages/sku/sku_detail",
+    "pages/my_order/my_order"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "崇禮旅游吧",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#353535",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/my_image/home.png",
+        "selectedIconPath": "images/my_image/home2.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/shopping_cart/shopping_cart",
+        "iconPath": "images/my_image/buy_car.png",
+        "selectedIconPath": "images/my_image/buy_car2.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/my_image/mine.png",
+        "selectedIconPath": "images/my_image/mine2.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

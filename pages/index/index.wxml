@@ -1,0 +1,38 @@
+<!--index.wxml-->
+
+<!--首页轮播图-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="{{bg}}" style='height:{{Height}}'>
+   <block wx:for="{{snow_packs}}">
+    <swiper-item>
+      <image src="{{item.url}}" class="slide-image" mode="widthFix" bindload='imgHeight'/>  
+    </swiper-item>
+   </block>
+</swiper>
+
+<!-- 列表渲染 -->
+<!-- home_list是要循环的数组，内部的属性通过item.xxx的方式调用 -->
+ <block wx:for='{{home_list}}'>
+   <!-- data-*属性在触发事件时获取  -->
+   <view class='singleTrade' hover-class='item-press' catchtap='showTradeDetail' data-id='{{item.id}}'>
+     <image src='{{item.imageUrl}}' class='img' />
+     <view class='a'>
+       <view class='name'>{{item.name}}</view>
+     </view>
+     <view class='b'>
+       <view class='price'>￥{{item.price}}</view>
+     </view>
+   </view>
+ </block>
+
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
